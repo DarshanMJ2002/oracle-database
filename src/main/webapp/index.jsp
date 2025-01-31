@@ -3,140 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-   style{
-    *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 70px;
-    width: 100%;
-    background-color: black;
-    color: yellow;
-    font-size: 20px;
-}
-nav>div:nth-child(1)
-{
-    font-weight: bolder;
-    font-size: 23px;font-family: Arial, Helvetica, sans-serif;
-}
-nav>div:nth-child(2)
-{
-    display: flex;
-    width: 30%;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-}
-a{
-    text-decoration: none;
-    color: yellow;
-}
-li{
-    list-style: none;
-}
-nav>div:nth-child(3)
-{
-    font-weight: bold;
-}
-#dropdown{
-    position: relative;
-    list-style: none;
-}
-#dropdown>li{
-    padding: 10px;
-    cursor: pointer;
-}
-#dropdown-menu{
-    position: absolute;
-    display:none;
-    top:100%;
-    left: 0;
-    background-color:white;
-    border: 1px solid #ccc;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    min-width: 200px;
-    z-index: 10;
-}
-#dropdown:hover #dropdown-menu{
-    display: block;
-}
-#dropdown-menu li{
-    padding: 10px;
-    cursor: pointer;
-    list-style: none;
-}
-#dropdown-menu li:hover{
-    background-color: #f1f1f1f1;
-}
-#dropdown >li>a{
-    text-decoration: none;
-    color: yellow;
-    font-weight: bold;
-}
-#dropdown-menu >li>a{
-    text-decoration: none;
-    color: #333;
-    
-}
-}
-   
-  
+    <title>Flipkart Clone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f1f3f6;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2874f0;
+            padding: 10px 20px;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .search-bar {
+            flex: 1;
+            margin: 0 20px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+        }
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .banner {
+            width: 100%;
+            height: 300px;
+            background: url('https://via.placeholder.com/1200x300') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 60px;
+        }
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .categories div {
+            text-align: center;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-card {
+            background: white;
+            padding: 15px;
+            width: 200px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .footer {
+            background: #172337;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <div>My App</div>
-        <div>
-            <li><a href="">Home</a></li>
-        <div id="dropdown">
-              
-            <li><a href="">Products</a></li>
-           <div id="dropdown-menu">
-                <li><a href="" id="men">Men's Collection</a></li>
-                <li><a href="" id="kid">Kid's Collection</a></li>
-           </div>
+    <div class="navbar">
+        <div class="logo">Flipkart</div>
+        <div class="search-bar"><input type="text" placeholder="Search for products, brands and more"></div>
+        <div class="menu">
+            <a href="home.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="cart.html">Cart</a>
+            <a href="login.html">Login</a>
         </div>
-            <li><a href="">About Us</a></li>
-      
-        </div>
-        <div id="Logout"><a href="">Logout</a>
-        </div>
-    </nav>
-    <div>
-        <h1 id="message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, recusandae? Voluptatibus ipsa, ipsum at a aut consequuntur aliquid consectetur modi adipisci ab soluta cum optio iste doloribus voluptate. Iure, neque.</h1>
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-   
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="https://cdn.pixabay.com/photo/2018/07/26/09/56/ecommerce-3563183_640.jpg" class="d-block w-100" alt="..." height="300px">
-          </div>
-          <div class="carousel-item">
-            <img src="https://cdn.pixabay.com/photo/2018/07/25/20/29/ecommerce-3562191_640.jpg" class="d-block w-100" alt="..." height="300px">
-          </div>
-          <div class="carousel-item">
-            <img src="https://cdn.pixabay.com/photo/2017/03/13/17/26/ecommerce-2140603_640.jpg" class="d-block w-100" alt="..." height="300px">
-          </div>
+    <div class="banner">Banner Image</div>
+    <div class="categories">
+        <div>Electronics</div>
+        <div>Clothing</div>
+        <div>Home & Kitchen</div>
+        <div>Sports</div>
+    </div>
+    <div class="products">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Product 1">
+            <p>Product 1</p>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      <div>
-
-      </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Product 2">
+            <p>Product 2</p>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Product 3">
+            <p>Product 3</p>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Product 4">
+            <p>Product 4</p>
+        </div>
+    </div>
+    <div class="footer">&copy; 2024 Flipkart Clone. All rights reserved.</div>
 </body>
 </html>
