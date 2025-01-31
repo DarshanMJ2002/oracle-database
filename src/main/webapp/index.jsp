@@ -3,142 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flipkart Clone</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Beautiful Webpage</title>
     <style>
+        /* General reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
         }
+
         body {
-            background-color: #f1f3f6;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 0;
+            margin: 0;
         }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #2874f0;
-            padding: 10px 20px;
-            color: white;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        .navbar .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .search-bar {
-            flex: 1;
-            margin: 0 20px;
-        }
-        .search-bar input {
-            width: 100%;
-            padding: 8px;
-            border: none;
-            border-radius: 4px;
-        }
-        .menu {
-            display: flex;
-            gap: 20px;
-        }
-        .menu a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        .banner {
-            width: 100%;
-            height: 300px;
-            background: url('https://via.placeholder.com/1200x300') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 60px;
-        }
-        .categories {
-            display: flex;
-            justify-content: space-around;
-            background: white;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 5px;
-        }
-        .categories div {
+
+        /* Header Section */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
             text-align: center;
         }
-        .products {
+
+        header h1 {
+            font-size: 3em;
+        }
+
+        header nav {
+            margin-top: 10px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        header nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Main Section */
+        main {
+            padding: 40px;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
-            padding: 20px;
+            justify-content: space-between;
         }
-        .product-card {
-            background: white;
-            padding: 15px;
-            width: 200px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
+
+        .section {
+            width: 48%;
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Card style */
+        .card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
         }
-        .product-card:hover {
+
+        .card:hover {
             transform: scale(1.05);
         }
-        .product-card img {
+
+        .card img {
             width: 100%;
             height: auto;
-            border-radius: 5px;
+            border-radius: 8px;
         }
-        .footer {
-            background: #172337;
-            color: white;
+
+        .card h3 {
+            font-size: 1.8em;
+            margin: 10px 0;
+        }
+
+        .card p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        /* Footer Section */
+        footer {
+            background: #333;
+            color: #fff;
             text-align: center;
-            padding: 20px;
-            margin-top: 20px;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 1em;
         }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">Flipkart</div>
-        <div class="search-bar"><input type="text" placeholder="Search for products, brands and more"></div>
-        <div class="menu">
-            <a href="home.html">Home</a>
-            <a href="categories.html">Categories</a>
-            <a href="cart.html">Cart</a>
-            <a href="login.html">Login</a>
+
+<header>
+    <h1>Welcome to My Beautiful Webpage</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <div class="container">
+        <div class="section" id="home">
+            <h2>Home</h2>
+            <p>This is a beautifully designed webpage created with HTML and CSS. It features a responsive layout, clean design, and interactive elements like hover effects.</p>
+        </div>
+
+        <div class="section" id="services">
+            <h2>Our Services</h2>
+            <div class="card">
+                <img src="https://via.placeholder.com/500" alt="Service Image">
+                <h3>Web Design</h3>
+                <p>We create stunning and functional websites that are tailored to your needs. Our designs are modern, responsive, and user-friendly.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/500" alt="Service Image">
+                <h3>SEO Optimization</h3>
+                <p>Our SEO experts help improve your website's search engine ranking, ensuring more traffic and visibility for your business.</p>
+            </div>
+        </div>
+
+        <div class="section" id="about">
+            <h2>About Us</h2>
+            <p>We are a team of passionate web developers and designers dedicated to creating innovative solutions that help businesses succeed online.</p>
+        </div>
+
+        <div class="section" id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to us for any inquiries. We are happy to assist you in any way we can.</p>
         </div>
     </div>
-    <div class="banner">Banner Image</div>
-    <div class="categories">
-        <div>Electronics</div>
-        <div>Clothing</div>
-        <div>Home & Kitchen</div>
-        <div>Sports</div>
-    </div>
-    <div class="products">
-        <div class="product-card">
-            <img src="https://via.placeholder.com/200" alt="Product 1">
-            <p>Product 1</p>
-        </div>
-        <div class="product-card">
-            <img src="https://via.placeholder.com/200" alt="Product 2">
-            <p>Product 2</p>
-        </div>
-        <div class="product-card">
-            <img src="https://via.placeholder.com/200" alt="Product 3">
-            <p>Product 3</p>
-        </div>
-        <div class="product-card">
-            <img src="https://via.placeholder.com/200" alt="Product 4">
-            <p>Product 4</p>
-        </div>
-    </div>
-    <div class="footer">&copy; 2024 Flipkart Clone. All rights reserved.</div>
+</main>
+
+<footer>
+    <p>&copy; 2025 My Beautiful Webpage. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
