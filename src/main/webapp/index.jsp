@@ -1,4 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,7 +57,7 @@
             color: #333;
         }
         .features li::before {
-            content: '\\2713';
+            content: '\2713';
             color: green;
             margin-right: 10px;
         }
